@@ -1,14 +1,23 @@
 // AppComponent.vue
+
 <template>
 <div>{{ msg }}</div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       msg: 'Hello from vue'
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+* {
+  background-color: $globalvar;
+}
+
+</style>

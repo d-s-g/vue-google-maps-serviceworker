@@ -1,0 +1,70 @@
+Arguments: 
+  /Users/davidgibson/.nvm/versions/node/v9.4.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/davidgibson/.nvm/versions/node/v9.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/local/go/bin
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  9.4.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "vue-google-maps-service-worker",
+    "version": "1.0.0",
+    "description": "Google maps vue ui with service worker",
+    "main": "index.js",
+    "scripts": {
+      "dev": "webpack-dev-server --mode development",
+      "prod": "webpack --mode production"
+    },
+    "author": "David Gibson",
+    "license": "ISC",
+    "dependencies": {
+      "babel-core": "^6.26.3",
+      "babel-eslint": "^8.2.3",
+      "babel-loader": "^7.1.4",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-stage-0": "^6.24.1",
+      "eslint": "^4.19.1",
+      "eslint-config-standard": "^11.0.0",
+      "eslint-config-standard-jsx": "^5.0.0",
+      "eslint-plugin-html": "^4.0.2",
+      "eslint-plugin-import": "^2.10.0",
+      "eslint-plugin-jest": "^21.15.1",
+      "eslint-plugin-node": "^6.0.0",
+      "eslint-plugin-promise": "^3.7.0",
+      "eslint-plugin-react": "^7.8.2",
+      "eslint-plugin-standard": "^3.1.0",
+      "eslint-plugin-vue": "^4.5.0",
+      "vue": "^2.5.16",
+      "vue-loader": "^14.2.2",
+      "vue-template-compiler": "^2.5.16",
+      "webpack": "^4.8.3",
+      "webpack-cli": "^2.1.3",
+      "webpack-dev-server": "^3.1.4"
+    },
+    "devDependencies": {
+      "jest": "^22.4.4",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/davidgibson/dev/vue-google-maps-serviceworker/package.json: Unexpected token } in JSON at position 1138
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/0.27.5/libexec/lib/yarn-cli.js:747:57
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/0.27.5/libexec/lib/yarn-cli.js:91:30)
+      at /usr/local/Cellar/yarn/0.27.5/libexec/lib/yarn-cli.js:102:13
+      at <anonymous>
