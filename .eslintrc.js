@@ -47,7 +47,7 @@ module.exports = {
       'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
   
       // Do not allow console.logs etc...
-      'no-console': 2,
+      'no-console': 'off',
       'space-before-function-paren': [
               2,
               {
@@ -57,5 +57,7 @@ module.exports = {
           ],
     },
   
-    globals: {}
+    globals: {
+      'google': true
+    }
   }

@@ -1,15 +1,17 @@
-// AppComponent.vue
+// App.vue
 
 <template>
-<div>{{ msg }}</div>
+  <page></page>
 </template>
 
 <script>
+
+import Page from './Page/page.vue'
+
 export default {
-  data() {
-    return {
-      msg: 'Hello from vue'
-    }
+  name: `App`,
+  components: {
+    Page
   }
 }
 </script>
