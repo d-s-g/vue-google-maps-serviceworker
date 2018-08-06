@@ -19,25 +19,6 @@ export default {
       this.initMap()
     })
   },
-  // computed: {
-  //   markers() {
-  //     let markers = []
-  //     const bounds = new google.maps.LatLngBounds()
-
-  //     this.markerCoordinates.forEach((coord) => {
-  //       const position = new google.maps.LatLng(coord.latitude, coord.longitude)
-  //       const marker = new google.maps.Marker({
-  //         position,
-  //         map: this.map
-  //       })
-  //       markers.push(marker)
-  //       bounds.extend(position)
-  //     })
-
-  //     this.map.fitBounds(bounds)
-  //     return markers
-  //   }
-  // },
   methods: {
     initMap() {
       const element = document.querySelector('#pizza-map')
@@ -48,6 +29,15 @@ export default {
       }
       this.map = new google.maps.Map(element, options)
       return this.map
+    },
+    loadMarkers(locations) {
+      locations.map((locations) => {
+        let marker = new google.maps.Marker({
+          position: locations.geometry.location,
+          map: this.map
+        })
+        return marker
+      })
     }
   },
   computed: {
@@ -59,8 +49,11 @@ export default {
     locations: function (locations) {
       let getMapCenter = this.$store.getters.getMapCenter
       let newCenter = new google.maps.LatLng(getMapCenter.lat, getMapCenter.lng)
+      let pizzaLocations = this.$store.getters.getLocations
+
       this.mapActive = true
       this.map.setCenter(newCenter)
+      this.loadMarkers(pizzaLocations)
     }
   }
 }
