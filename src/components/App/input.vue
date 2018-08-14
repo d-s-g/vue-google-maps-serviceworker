@@ -16,9 +16,11 @@ import { loadedGoogleMapsAPI } from '../../index'
 
 export default {
   name: `PizzaInput`,
-  data: {
-    service: [],
-    userInput: ''
+  data: function () {
+    return {
+      service: [],
+      userInput: ''
+    }
   },
   mounted: function () {
     loadedGoogleMapsAPI.then(() => {
@@ -27,7 +29,7 @@ export default {
   },
   methods: {
     initPlaces() {
-      var map = document.querySelector('.drawer')
+      var map = document.querySelector('.places-init')
       this.service = new google.maps.places.PlacesService(map)
     },
     getPizzaPlace(event) {

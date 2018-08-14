@@ -13,6 +13,8 @@ const loadedGoogleMapsAPI = new Promise((resolve, reject) => {
     `https://maps.googleapis.com/maps/api/js?key=AIzaSyDE_ta4fRs7Je_SGXo7Qs_niKdu5d9-ig4&libraries=places&callback=GoogleMapsInit`)
 
   document.head.appendChild(GMap)
+
+  console.log('fire')
 })
 
 export {loadedGoogleMapsAPI}

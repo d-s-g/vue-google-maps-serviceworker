@@ -1,5 +1,5 @@
 <template>
-    <div id="pizza-map" class="google-map" :class="{'google-map--active': mapActive}"></div>
+  <div id="pizza-map" class="google-map" :class="{'google-map--active': mapActive}"></div>
 </template>
 
 <script>
@@ -36,8 +36,14 @@ export default {
           position: locations.geometry.location,
           map: this.map
         })
+        marker.addListener('click', () => this.setCurrentLocation(locations))
         return marker
       })
+    },
+    // handleMarkerClick(locations) {
+    // }
+    setCurrentLocation(location) {
+      return this.$store.commit('updateCurrentLocation', location)
     }
   },
   computed: {
